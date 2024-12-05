@@ -34,6 +34,9 @@ export default function Home() {
     }
 
     let request = (str) => {
+        if(questions.length > answers.length) {
+            setAnswers((preqA) => ([...preqA, '']));
+        }
         ApiRequest(str);
         setQuestions((prevQ) => ([...prevQ, str]));
     }
