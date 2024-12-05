@@ -1,4 +1,4 @@
-import Input from "./Home/input";
+import Input from "./Home/Input"
 import "./Home.css"
 import Buttons from "./Home/Buttons";
 import { useState } from "react";
