@@ -1,0 +1,23 @@
+.chat {
+    width : 55%;
+    height: 80%;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+.chat p {
+    width: 70%;
+}
+
+.chat .right {
+    margin-left: 30%;
+    text-align: end;
+    background-color: rgba(255, 255, 255, 0.119);
+    padding: 10px;
+    border-radius: 10px;
+}

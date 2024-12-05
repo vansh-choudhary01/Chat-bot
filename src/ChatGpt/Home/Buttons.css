@@ -1,0 +1,11 @@
+.buttons {
+    margin-top: 30px;
+    width : 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons .btn {
+    border-radius: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.406);
+}
