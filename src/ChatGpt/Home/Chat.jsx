@@ -19,9 +19,13 @@ export default function Chat({questions, answers}) {
                     <p className="right">
                         {questions[idx]}
                     </p>
-                    <p className="left">
-                        {answers[idx] ? answers[idx] : "generating..."}
-                    </p>
+                    <p className="left"
+                        dangerouslySetInnerHTML={{
+                            __html: answers[idx]
+                                ? answers[idx]
+                                : "generating...",
+                        }}
+                    />
                 </React.Fragment>
             ))}
         </div>

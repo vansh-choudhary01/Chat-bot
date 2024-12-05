@@ -56,9 +56,18 @@ Additional Notes:
 - Ensure empathy when responding to sensitive or emotional inputs.
 `;
 
-        const result = await model.generateContent(prompt);
+        function formatChatbotResponse(response) {
+            // Format the response for display on the frontend
+            return response
+                .replace(/\*\*/g, '') // Remove bold markers (double asterisks)
+                .replace(/(\* )/g, '<br>&nbsp;&nbsp;&nbsp;&bull; ') // Replace bullet points with HTML bullets and indentation
+                .replace(/: /g, ':<br>&nbsp;&nbsp;&nbsp;') // Add line break and indentation after colons
+                .replace(/(\. )/g, '.<br><br>') // Add double line breaks between sentences
+                .trim();
+        }
 
-        const data = result.response.text();
+        const result = await model.generateContent(prompt);
+        const data = formatChatbotResponse(result.response.text());
         responce(data);
     }
 
